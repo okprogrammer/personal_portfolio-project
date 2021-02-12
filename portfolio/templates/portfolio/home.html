@@ -1,0 +1,28 @@
+{% extends "portfolio/base.html" %}
+
+{% block content %}
+<h1 style="text-align: center;">Om's Portfolio</h1>
+
+{% load static %}
+
+<img src="{% static 'portfolio/om.jpg' %}" style="display:block; width: 50%;margin-left:auto;margin-right:auto;" alt="hhhg">
+<hr>
+
+<div style="text-align: center;">
+    <h1>These are some of my Projects</h1>
+    {% for project in projects %}
+    <h2>{{project.title}}</h1>
+    <h5>{{project.description}}</h5>
+    <img src="{{project.image.url}}" height="100" width="100" alt="">
+    
+    {% if project.url %}
+    <a href="{{project.url}}">Link</a> 
+    {% endif %}
+    
+    {% endfor %} 
+</div>
+
+
+{% endblock %}
+
+
