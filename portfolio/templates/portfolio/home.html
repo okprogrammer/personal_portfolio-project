@@ -13,10 +13,10 @@
     {% for project in projects %}
     <h2>{{project.title}}</h1>
     <h5>{{project.description}}</h5>
-    <img src="{{project.image.url}}" height="100" width="100" alt="">
+    <img src="{{project.image.url}}" height="250" width="250" alt="">
     
     {% if project.url %}
-    <a href="{{project.url}}">Link</a> 
+    <a href="{{project.url}}">View Source Code</a> 
     {% endif %}
     
     {% endfor %} 
